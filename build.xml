@@ -10,6 +10,56 @@
 <project name="TestJenkinJava" default="default" basedir=".">
     <description>Builds, tests, and runs the project TestJenkinJava.</description>
     <import file="nbproject/build-impl.xml"/>
+<!--    <target name="clean">
+        <delete dir="build"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="build/classes"/>
+        <javac srcdir="src" destdir="build/classes"/>
+    </target>
+    <target name="jar">
+        <mkdir dir="build/jar"/>
+        <jar destfile="build/jar/testLCS.jar" basedir="build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="testjenkinjava.TestJenkinJava"/>
+            </manifest>
+        </jar>
+    </target>
+    <target name="run">
+        <java jar="build/jar/testLCS.jar" fork="true"/>
+    </target>
+-->
+    <!--<target name="TestLCS" >
+    <junit>
+        <classpath>
+            <pathelement location="./junit-4.8.2.jar"/>
+            <pathelement location="./ant-junit4.jar"/>
+        </classpath>
+        <formatter type="plain" usefile="false" /> 
+        <formatter type="plain" />
+        <test name = "sample.TestLCS" todir="."/>
+    </junit> 
+</target> -->
+<!--
+<target name="TestLCS">
+  <junit>
+    <classpath> 
+      <pathelement location="c:/junit/junit-4.8.2.jar"/>
+    </classpath>    
+    <batchtest>
+       <fileset dir="./test">
+            <include name="**/*Test*" />
+       </fileset>
+    </batchtest>
+    <formatter type="brief" usefile="false"/>
+  </junit>
+</target>  
+-->
+    <!-- build all classes in this directory -->
+  <!-- To run this: use "ant build" -->
+  <!-- need to include junit.jar in the classpath -->
+ 
     <!--
 
     There exist several targets which are by default empty and which can be 

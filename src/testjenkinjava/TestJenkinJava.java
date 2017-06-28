@@ -5,12 +5,14 @@
  */
 package testjenkinjava;
 
-import java.util.Scanner;
-
+import org.junit.runner.JUnitCore;
+import org.junit.runner.Result;
+import org.junit.runner.notification.Failure;
 /**
  *
  * @author Thanh
  */
+
 public class TestJenkinJava {
 
     /**
@@ -45,14 +47,6 @@ public class TestJenkinJava {
         }
         return a[m][n];
     }
-
-    public String getStringOne() {
-        return stringOne;
-    }
-
-    public String getStringTwo() {
-        return stringTwo;
-    }
     /*
     public static void main(String[] args) {
         // TODO code application logic here
@@ -78,4 +72,15 @@ public class TestJenkinJava {
         System.out.println(a[m][n]);
     }
      */
+    public static void main(String[] args) {  
+        //junit.textui.TestRunner.run(new TestSuite(TestLCS.class));
+        Result result = JUnitCore.runClasses(TestLCS.class);
+		
+      for (Failure failure : result.getFailures()) {
+         System.out.println(failure.toString());
+      }
+		
+      System.out.println(result.wasSuccessful());
+    }
+
 }
